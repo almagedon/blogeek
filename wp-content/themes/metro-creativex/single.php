@@ -19,10 +19,7 @@ get_header(); ?>
 				<?php 
 					$metro_creativex_posttitle = get_the_title();
 					$metro_creativex_feat_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-					if(isset($metro_creativex_feat_image[0])):
-						echo '<div class="post_img"><img src='.$metro_creativex_feat_image[0].' alt="'.$metro_creativex_posttitle.'"></div>';
-					endif;	
-				
+
 					the_content(); 
 					wp_link_pages();
 					edit_post_link( __('Edit post', 'metro-creativex'));
